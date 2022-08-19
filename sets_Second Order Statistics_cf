@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+  int n, x;
+  set<int> s;
+  cin >> n;
+  for (int i = 0; i < n; i++)
+  {
+    cin >> x;
+    s.insert(x);
+  }
+  if (s.size() <= 1)
+  {
+    cout << "NO" << endl;
+  }
+  else
+  {
+    int c = 0;
+    auto it = s.begin();
+    for (it = s.begin(); it != s.end(); it++)
+    {
+      if (c == 1)
+      {
+        cout << *it << endl;
+        break;
+      }
+      c++;
+    }
+  }
+ 
+  return 0;
+}
