@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main(){
+    int n;
+    cin>>n;
+    n*=2;
+    set<int>S;
+    int m=0;
+    for(int i=0;i<n;i++){
+        int x;
+        scanf("%d",&x);
+        if(S.count(x)){
+            S.erase(x);
+        }
+        else {
+          S.insert(x);
+          }
+        m=max((int)S.size(),m);
+    }
+    cout<<m<<endl;
+return 0;
+}
