@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n;
+    cin >> n;
+    while (n--)
+    {
+        int t;
+        cin >> t;
+        t=2*t;
+        vector<int>vec1;
+        int ele;
+        for (int i = 0; i <  t; i++)
+        {
+            cin>> ele;
+            vec1.push_back(ele);
+        }
+        sort(vec1.begin(),vec1.end());
+        int start=0;
+        int end = t-1;
+        while(start<end){
+            cout<<vec1[start++]<<" ";
+            if(start>end){
+                break;
+            }
+            cout<<vec1[end--]<<" ";
+            if(start>end){
+                 break;
+            }
+        }
+            cout<<endl;
+        
+    }
+ 
+    return 0;
+}
