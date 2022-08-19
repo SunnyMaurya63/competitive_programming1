@@ -1,0 +1,27 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+  map<string, int> freq;
+ 
+  int n;
+  cin >> n;
+  while (n--)
+  {
+    string str;
+    cin >> str;
+    if (freq[str] == 0)
+    {
+      cout << "OK"
+           << "\n";
+    }
+    else
+    {
+      cout << str << freq[str] << "\n";
+      ;
+    }
+    freq[str]++;
+  }
+  return 0;
+}
