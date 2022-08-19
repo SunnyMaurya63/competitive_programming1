@@ -1,0 +1,42 @@
+#include <bits/stdc++.h>
+using namespace std;
+int gcd( int a, int b){
+    if (b<a) return gcd(b,a);
+    if(a==0) 
+    return b;
+    return gcd(a,b%a);
+}
+ 
+int lcm(int a, int b)
+{
+    return (a / gcd(a, b)) * b;
+}
+ 
+int main() {
+   int  n;
+   cin>>n;
+   int count =0;
+   while(n--){
+     int t;
+     cin>>t; 
+    for(int i=0;i<=t;i++){
+        int a=i+1;
+        for(int j=1;j<=t;j++){
+            
+            int b=t-a;
+            
+            if((gcd(a,b)+lcm(a,b))==t){
+                cout<<a<<" "<<b<<endl;
+                count++;
+                break;
+            }
+        }
+        if(count>0)
+        break;
+    }
+    
+    }
+ 
+    
+    return 0;
+}
